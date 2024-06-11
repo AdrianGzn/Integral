@@ -63,19 +63,19 @@ const teacher = [
 ];
 
 function getManagement() {
-    return managemente();
+    return managemente;
 }
 
 function getEscolarControl() {
-    return escolarControl();
+    return escolarControl;
 }
 
 function getResourses() {
-    return resourses();
+    return resourses;
 }
 
 function getTeacher() {
-    return teacher();
+    return teacher;
 }
 
 export default {getManagement, getEscolarControl, getResourses, getTeacher};

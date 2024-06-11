@@ -1,7 +1,8 @@
 let users = [
     {
-        nombre: "Dierector",
-        contraseña: 123
+        nombre: "Director",
+        contraseña: 123,
+        page: "/Home"
     },
     {
         nombre: "Maestro",
@@ -24,3 +25,5 @@ function getUsers() {
 function addUsers(nombre, contraseña) {
     users.push({nombre: nombre, contraseña: contraseña});
 }
+
+export default {getUsers, addUsers}

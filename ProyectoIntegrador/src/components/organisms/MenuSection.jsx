@@ -10,7 +10,7 @@ const DivStyled = styled.div`
     align-items: center;
 `
 
-function MenuSection(props) {
+function MenuSection(props) {   
     return (<>
         <DivStyled>
             <PanelButton option={props.option}></PanelButton>

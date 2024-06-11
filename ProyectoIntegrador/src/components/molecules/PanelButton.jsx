@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { useState } from 'react';
-import {getManagement, getEscolarControl, getResourses, getTeacher} from "../../data/options";
+import Option from "../../data/options";
 import MenuButton from "../atoms/MenuButton";
 
 const DivStyled = styled.div`
@@ -10,21 +10,13 @@ const DivStyled = styled.div`
 function PanelButton(props) {
     let option = props.option;
     const [options, setOptions] = useState([]);
-
+    
     if(true){
         switch(option) {
             case "managemente":
-                setOptions = getManagement();
+                setOptions([...options, {title: "hola", hola:"hi"}]);
                 break;
-            case "escolarControl":
-                setOptions = getEscolarControl();
-                break;
-            case "resourses":
-                setOptions = getResourses();
-                break;
-            case "teacher":
-                setOptions = getTeacher();
-               break;
+
             default:
                 console.log("Error");
         }

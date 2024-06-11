@@ -1,0 +1,17 @@
+#cal_data {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cal_button {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

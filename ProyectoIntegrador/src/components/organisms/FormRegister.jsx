@@ -4,9 +4,9 @@ import Field from "../molecules/Field";
 import Button from "../atoms/Button";
 import "../../data/users"
 import Style from "./ForminLogin.module.css"
+import Data from "../../data/users"
 import Swal from "sweetalert2"
-import { useNavigate } from "react-router-dom";
-import  Users from "../../data/users"
+import { useNavigate } from 'react-router-dom';
 
 const DivStyled = styled.div`
     border-radius: 10px; 
@@ -23,38 +23,26 @@ const DivStyled = styled.div`
 
 `;
 
-function FormLogin() {
+function FormRegister() {
     const [name, setName] = useState('');
     const [pass, setPass] = useState('');
     const navigate = useNavigate()
 
     const handlerClick = () => {
-        
-        let listUsers = Users.getUsers();
-        let flag = false;
-        let index;
-        for (let i = 0; i < listUsers.length; i++) {
-           if ( name == listUsers[i].nombre && pass == listUsers[i].contraseña) {
-            index = listUsers[i].page
-                
-                flag = true;
-           }
-            
-        }
-
-        if(flag){
+        if(!name || !pass) {
+            Swal.fire({
+                title: "Register",
+                text: "the form is blank",
+                icon: "error"
+            })
+        }else {
+            Data.addUsers(name, pass)
             Swal.fire({
                 title: "Sesión iniciada correctamente",
                 text: `Puede continuar`,
-                icon: "succes"
+                icon: "success"
             });
-            navigate(index)
-        }else{
-            Swal.fire({
-                title: "Datos incorrectos",
-                text: `Complete los campos de nuevo`,
-                icon: "error"
-            });     
+            navigate("/home");    
         }
     }
 
@@ -65,11 +53,11 @@ function FormLogin() {
         <Field text="Contraseña" type="password" placeholder="Contraseña" val={pass} fnVal={setPass}></Field>        
      </div>
      <div id={Style.cal_button}>
-        <Button onClick={handlerClick} text="Iniciar sesión"></Button>        
+        <Button onClick={handlerClick} text="Registrarse"></Button>        
      </div>
     </DivStyled>
     )
     
 }
 
-export default FormLogin;
+export default FormRegister;
