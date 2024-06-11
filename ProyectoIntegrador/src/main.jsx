@@ -27,11 +27,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/management",
-    element: <Teacher />,
+    element: <Managemenet />,
   },
   {
     path: "/teacher",
-    element: <Managemenet />,
+    element: <Teacher />,
   },
 ]);
 

@@ -13,7 +13,7 @@ function Teacher() {
         <Helmet><title>Teacher</title></Helmet>
         
         <DivStyled>
-            <MenuSection option="teacher"></MenuSection>
+            <MenuSection option="teacher" title="Maestro"></MenuSection>
         </DivStyled>
     </>)
 }

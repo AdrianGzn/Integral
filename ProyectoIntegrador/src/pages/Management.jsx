@@ -13,7 +13,7 @@ function Management() {
         <Helmet><title>Management</title></Helmet>
         
         <DivStyled>
-            <MenuSection option="managemente"></MenuSection>
+            <MenuSection option="managemente" title="Dirección"></MenuSection>
         </DivStyled>
     </>)
 }

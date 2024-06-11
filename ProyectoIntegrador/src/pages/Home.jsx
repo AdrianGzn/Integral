@@ -13,7 +13,7 @@ function Home() {
         <Helmet><title>Home</title></Helmet>
         
         <DivStyled>
-            <MenuSection option="escolarControl"></MenuSection>
+            <MenuSection option="escolarControl" title="Control escolar"></MenuSection>
         </DivStyled>
     </>)
 }

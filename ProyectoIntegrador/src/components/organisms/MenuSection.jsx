@@ -13,7 +13,7 @@ const DivStyled = styled.div`
 function MenuSection(props) {   
     return (<>
         <DivStyled>
-            <PanelButton option={props.option}></PanelButton>
+            <PanelButton option={props.option} title={props.title}></PanelButton>
         </DivStyled>
     </>)
 }
